@@ -1,19 +1,27 @@
-# ===== SERVER =====
-NODE_ENV=development
-PORT=3000
-APP_URL=http://localhost:3000
+# Dependencies
+node_modules/
 
-# ===== DATABASE (Render will provide this) =====
-DATABASE_URL=postgresql://user:password@host:5432/dbname
+# Environment files (NEVER commit real secrets)
+.env
+.env.local
+.env.*.local
 
-# ===== AUTH =====
-# Generate a long random string (at least 64 characters). Never share it.
-JWT_SECRET=replace-with-a-long-random-secret
-SESSION_SECRET=replace-with-another-long-random-secret
+# Logs
+logs
+*.log
+npm-debug.log*
 
-# ===== CLOUDINARY (product image storage) =====
-CLOUDINARY_URL=cloudinary://API_KEY:API_SECRET@CLOUD_NAME
+# Prisma local database
+*.db
+*.db-journal
 
-# ===== PAYSTACK (test keys first) =====
-PAYSTACK_SECRET_KEY=sk_test_xxxxxxxxxxxxxxxxxxxx
-PAYSTACK_PUBLIC_KEY=pk_test_xxxxxxxxxxxxxxxxxxxx
+# Uploads temp
+uploads/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
